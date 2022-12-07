@@ -35,6 +35,9 @@ router.get('/cats', (req, res) => {
     })
 })
 
+router.get('/cats/new', (req,res) => {
+    res.render('cats/new.ejs')
+})
 
 
 
