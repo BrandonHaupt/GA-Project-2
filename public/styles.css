@@ -23,7 +23,7 @@ body {
 }
 
 img {
-    border-radius: 19px 19px 0 0;
+    
 }
 
 header {
@@ -79,8 +79,14 @@ header {
 .card img {
     min-height: 300px;
     object-fit: cover;
+    border-radius: 19px 19px 0 0;
 }
 
+.cat-image {
+    width: 40%;
+    margin: 0 0 0 5%;
+    border-radius: 25px;
+}
 
 
 

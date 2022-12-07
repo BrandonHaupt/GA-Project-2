@@ -7,11 +7,13 @@
 <body>
     <%- include('../partials/header.ejs') %> 
     <main>
-        <nav>
-            <p>Sort: </p>
-            <a href="/cats/new"><button>Add a new Cat</button></a>
+        <nav class="nav nav-pills nav-fill">
+            <p class="nav-link">Sort: </p>
+            <a class="nav-link" href="/cats"><button class="btn btn-secondary">Back</button></a>
+            <a class="nav-link" href="/cats/new"><button class="btn btn-secondary">Add a new Cat</button></a>
         </nav>
 
+        <img class="cat-image" src="<%=cat.url %>" alt="a picture of a <%=cat.breed %>">
         
     </main>
     
