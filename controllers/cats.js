@@ -9,8 +9,8 @@ const Cat = require('../models/cat')
 ////////////////////////////
 const router = express.Router()
 
-const body = req.body
-const id = req.params.id
+// const body = req.body
+// const id = req.params.id
 
 
 /////////////////////////////////////////
@@ -20,10 +20,9 @@ const id = req.params.id
 /////////////////
 //    SEED    //
 ////////////////
-router.get('/cats/seed', (req,res) => {})
+// router.get('/cats/seed', (req,res) => {})
 
 router.get("/", (req,res) => res.redirect('/cats'))
-
 
 
 
@@ -45,7 +44,8 @@ router.get('/cats', (req, res) => {
 //    CREATE    //
 //////////////////
 router.post('/cats', (req,res) => {
-    
+    const body = req.body
+
     Cat.create(body, (err, cat) => {
         res.redirect('/cats')
     })
@@ -58,6 +58,7 @@ router.post('/cats', (req,res) => {
 //    EDIT     //
 /////////////////
 router.get('/cats/:id/edit', (req, res) => {
+    const id = req.params.id
 
     Cat.findById(id, (err, cat) => {
         res.render('cats/edit.ejs', {cat})
@@ -72,6 +73,9 @@ router.get('/cats/:id/edit', (req, res) => {
 //    UPDATE    //
 //////////////////
 router.put('/cats/:id', (req, res) => {
+    const id = req.params.id
+    const body = req.body
+
     Cat.findbyIdAndUpdate(id, body, {new: true}, (err, cat) => {
         res.redirect('/cats')
     })
@@ -85,6 +89,8 @@ router.put('/cats/:id', (req, res) => {
 //    DELETE    //
 //////////////////
 router.delete('/cats/:id', (req, res) => {
+    const id = req.params.id
+    
     Cat. findbyIdAndDelete(id, (err, cat) => {
         res.redirect('/cats')
     })
@@ -98,10 +104,14 @@ router.delete('/cats/:id', (req, res) => {
 ////////////////
 //***** KEEP THIS AT BOTTOM *****
 router.get('/cats/:id', (req, res) => {
+    const id = req.params.id
+
     Cat.findById(id, (err, cat) => {
         res.render('cats/show.ejs', {cat})
     })
 })
+
+
 
 ///////////////////////
 //      EXPORTS     //

@@ -6,6 +6,19 @@
 </head>
 <body>
     <%- include('../partials/header.ejs') %> 
+    <main>
+        <nav>
+            <p>Sort: </p>
+            <a href="/cats/new"><button>Add a new Cat</button></a>
+        </nav>
+
+        <% for(cat of cats) { %> 
+        <div>
+            <a href="/cats/<%=cat._id %> "></a>
+            <%= cat.breed %> 
+        </div>
+        <% } %> 
+    </main>
     
 </body>
 </html>

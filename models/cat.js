@@ -11,7 +11,8 @@ const catSchema = new Schema({
     hairType: String,
     tendencyToShed: String,
     lifeExpectency: String,
-    weightRange: Object,
+    weightRange: {male: String, female: String},
+    url: String,
     personality: String,
     history: String
 })

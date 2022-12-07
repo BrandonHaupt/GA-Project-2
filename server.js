@@ -4,8 +4,8 @@
 require('dotenv').config() // Loads ENV Variable
 const express = require('express')
 const methodOverride = require('method-override') // Allows us to override post requests from our EJS/Forms
-const PORT = process.env.PORT // Grabs our port
 const CatRouter = require('./controllers/cats')
+const PORT = process.env.PORT // Grabs our port
 
 const app = express()
 
@@ -14,7 +14,7 @@ const app = express()
 //             MIDDLEWARE              //
 /////////////////////////////////////////
 app.use(methodOverride('_method'))
-app.use(express.urlencoded({extended:true}))
+app.use(express.urlencoded({extended: true}))
 app.use(express.static('public'))
 
 app.use(CatRouter)

@@ -1,10 +1,10 @@
 require('dotenv').config()
-const mongoose = reuqire('mongoose')
+const mongoose = require('mongoose')
 
 /////////////////////////////////////////
 //         DATABASE CONNECTION         //
 /////////////////////////////////////////
-const DATABASE_URL = proncess.env.DATABASE_URL
+const DATABASE_URL = process.env.DATABASE_URL
 const CONFIG = {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -16,9 +16,10 @@ const CONFIG = {
 mongoose.connect(DATABASE_URL, CONFIG)
 
 mongoose.connection
-.on('open', () => console.log('Connected to Mongoose!'))
-.on('close', () => console.log('Disconnected to Mongoose'))
-.on('error', (error) => console.log(error()))
+    .on('open', () => console.log('Connected to Mongoose!'))
+    .on('close', () => console.log('Disconnected to Mongoose'))
+    .on('error', (error) => console.log(error()))
+//
 
 ///////////////////////
 //      EXPORTS     //
