@@ -89,13 +89,15 @@ router.put('/cats/:id', (req, res) => {
 ///////////////////
 //    DELETE    //
 //////////////////
-router.delete('/cats/:id', (req, res) => {
+router.delete('/cats/:id', (req,res) => {
     const id = req.params.id
-    
-    Cat. findbyIdAndDelete(id, (err, cat) => {
+
+    Cat.findByIdAndDelete(id, (err, cat) => {
         res.redirect('/cats')
     })
 })
+
+
 
 
 
