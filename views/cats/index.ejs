@@ -7,23 +7,36 @@
 <body>
     <%- include('../partials/header.ejs') %> 
     <main>
-        <nav>
-            <p>Sort: </p>
-            <a href="/cats/new"><button>Add a new Cat</button></a>
-        </nav>
+        <nav class="nav nav-pills nav-fill">
+            <p class="nav-link">Sort: </p>
+            <a class="nav-link" href="/cats/new"><button class="btn btn-secondary">Add a new Cat</button></a>
+          </nav>
 
-        <% for(cat of cats) { %> 
-        <div class="card">
-            <a href="/cats/<%=cat._id %> ">
-                <img src="<%=cat.url %> " alt="a picture of a <%=cat.breed %> ">
-                <%= cat.breed %> 
-                <%= cat.hairType %> 
-                <%= cat.tendencyToShed %> 
-                <%= cat.lifeExpectency %> 
-            </a>
-            
-        </div>
-        <% } %> 
+          <div class="grid container">
+            <div class="row ">
+                    <% for(cat of cats) { %> 
+                        <div class="col "></div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="<%=cat.url %> " alt="a picture of a <%=cat.breed %>">
+                            <div class="card-body">
+                                <p><span class="wordFirst">Breed:</span> <%= cat.breed %> </p>
+                                <p><span class="wordFirst">Hair Type:</span> <%= cat.hairType %></p> 
+                                <p><span class="wordFirst">Tendency to Shed:</span> <%= cat.tendencyToShed %> </p> 
+                                <p><span class="wordFirst">Life Expectency:</span> <%= cat.lifeExpectency %> </p>
+                                <div class="btn-group">
+                                    <a href="/cats/<%=cat._id %>/edit "><button class="btn btn-secondary">Edit</button></a>
+                                </div>
+                                <div class="btn-group">
+                                    <form action="/cats/<%=cat._id %>?method=DELETE" method="POST">
+                                        <input class="btn btn-danger" type="submit" value="Delete">
+                                    </form>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                     <% } %> 
+                 </div>
+            </div>
     </main>
     
 </body>
