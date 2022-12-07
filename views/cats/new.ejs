@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs") %> 
+</head>
+<body>
+    <%- include('../partials/header.ejs') %> 
+    <main>
+        <nav class="nav nav-pills nav-fill">
+            <a class="nav-link" href="/cats"><button class="btn btn-secondary">Back</button></a>
+        </nav>
+
+        <div class="container">
+            <form class="row g-3" action="/cats" method="post">
+                <fieldset class="row">
+                    <legend>Edit <%= cat.breed %></legend>
+                </fieldset>
+                <div class="col-12">
+                    <label class="form-label"> Breed: </label>
+                    <input class="form-control" type="text" name="breed" placeholder="Please enter in cats breed">
+                </div>
+    
+                <div class="col-12">
+                    <label class="form-label">Hair Type:</label>
+                     <input class="form-control" type="text" name="hairType" placeholder="Hair Type">
+                </div>
+    
+                <div class="col-md-12">
+                    <labelclass="form-label">Tendency to Shed: </labelclass=>
+                    <input class="form-control" type="text" name="tendencyToShed" placeholder="How much does the cat shed?">
+                </div>
+    
+                <div class="col-md-12">
+                    <label class="form-label">URL: </label>
+                    <input class="form-control" type="text" name="url" placeholder="Add a url for the cat">
+                </div>
+    
+                <div class="col-md-12">
+                    <label class="form-label">Personality: </label>
+                    <input class="form-control" type="text" name="personality" placeholder="Personality of the cat">
+                </div>
+    
+                <div class="col-md-12">
+                    <label class="form-label">History </label>
+                    <input class="form-control" type="text" name="history" placeholder="Add some history about the cat">
+                </div>
+    
+                <div class="col-md-6">
+                  <label for="inputEmail4" class="form-label">Male Weight Range: </label>
+                  <input class="form-control" type="text" name="weightRange" placeholder="Male Weight Range">
+                </div>
+    
+                <div class="col-md-6">
+                  <label for="inputPassword4" class="form-label">Female Weight Range:</label>
+                  <input class="form-control" type="text" name="weightRange" placeholder="Female Weight Range">
+                </div>
+    
+                <div class="col-12">
+                    <input type="submit" value="Create new cat">
+                </div>
+            </form>
+        </div>
+        
+    </main>
+</body>
+</html>
