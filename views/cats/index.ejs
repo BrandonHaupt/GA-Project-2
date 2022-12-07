@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <title>Document</title> -->
     <%- include("../partials/head.ejs") %> 
 </head>
 <body>
@@ -10,12 +9,12 @@
         <nav class="nav nav-pills nav-fill">
             <p class="nav-link">Sort: </p>
             <a class="nav-link" href="/cats/new"><button class="btn btn-secondary">Add a new Cat</button></a>
-          </nav>
+        </nav>
 
-          <div class="grid container">
+        <div class="grid container">
             <div class="row ">
-                    <% for(cat of cats) { %> 
-                        <div class="col "></div>
+                <% for(cat of cats) { %> 
+                    <div class="col ">
                         <div class="card" style="width: 18rem;">
                             <img src="<%=cat.url %> " alt="a picture of a <%=cat.breed %>">
                             <div class="card-body">
@@ -23,21 +22,23 @@
                                 <p><span class="wordFirst">Hair Type:</span> <%= cat.hairType %></p> 
                                 <p><span class="wordFirst">Tendency to Shed:</span> <%= cat.tendencyToShed %> </p> 
                                 <p><span class="wordFirst">Life Expectency:</span> <%= cat.lifeExpectency %> </p>
+
                                 <div class="btn-group">
                                     <a href="/cats/<%=cat._id %>/edit "><button class="btn btn-secondary">Edit</button></a>
                                 </div>
+
                                 <div class="btn-group">
                                     <form action="/cats/<%=cat._id %>?method=DELETE" method="POST">
                                         <input class="btn btn-danger" type="submit" value="Delete">
                                     </form>
                                 </div>
+
                             </div>
-                          </div>
                         </div>
-                     <% } %> 
-                 </div>
+                    </div>
+                <% } %>    
             </div>
+        </div>
     </main>
-    
 </body>
 </html>

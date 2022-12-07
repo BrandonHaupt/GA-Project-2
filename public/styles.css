@@ -24,7 +24,6 @@ body {
 
 img {
     border-radius: 19px 19px 0 0;
-    object-fit: contain;
 }
 
 header {
@@ -75,4 +74,9 @@ header {
 
 .card .wordFirst {
     color: #98A8F8;
+}
+
+.card img {
+    min-height: 300px;
+    object-fit: cover;
 }
