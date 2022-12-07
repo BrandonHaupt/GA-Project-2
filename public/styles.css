@@ -3,4 +3,17 @@
 body {
     font-family: 'Itim', cursive;
     /* font-family: 'Roboto', sans-serif; */
+    background: url(./img/BG.png);
+}
+
+img {
+    width: 15%;
+    height: 20%;
+    border-radius: 19px 19px 0 0;
+    object-fit: contain;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
 }

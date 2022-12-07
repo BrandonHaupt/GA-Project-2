@@ -9,8 +9,6 @@ const Cat = require('../models/cat')
 ////////////////////////////
 const router = express.Router()
 
-// const body = req.body
-// const id = req.params.id
 
 
 /////////////////////////////////////////
@@ -45,7 +43,7 @@ router.get('/cats', (req, res) => {
 //////////////////
 router.post('/cats', (req,res) => {
     const body = req.body
-
+    
     Cat.create(body, (err, cat) => {
         res.redirect('/cats')
     })

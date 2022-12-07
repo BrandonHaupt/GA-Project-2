@@ -21,7 +21,7 @@ A full CRUD application of Cats!
 [Cat-alog wireframe](https://www.figma.com/file/mdBbKwaGvVERM7hMOwRSPj/Cat-alog?node-id=6%3A2063&t=z7lu016OneYCzUry-1)
 
 
-Project Link: https://brandonhaupt.github.io/GA-Project-1/
+Project Link: https://cat-alog.onrender.com
 
 Trello Link: https://trello.com/invite/b/XDauokY5/ATTI4e64217aed5e56649d8121b844e9fdad04B15A0D/ga-unit-2-project-cat-alog
 
