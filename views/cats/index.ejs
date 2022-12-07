@@ -16,7 +16,10 @@
                 <% for(cat of cats) { %> 
                     <div class="col ">
                         <div class="card" style="width: 18rem;">
-                            <img src="<%=cat.url %> " alt="a picture of a <%=cat.breed %>">
+                            <a href="/cats/<%=cat._id%>">
+                                <img src="<%=cat.url %> " alt="a picture of a <%=cat.breed %>">
+                            </a>
+                            
                             <div class="card-body">
                                 
                                 <p><span class="wordFirst">Breed:</span> <%= cat.breed %> </p>

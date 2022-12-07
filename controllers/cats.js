@@ -73,11 +73,12 @@ router.get('/cats/:id/edit', (req, res) => {
 ///////////////////
 //    UPDATE    //
 //////////////////
-router.put('/cats/:id', (req, res) => {
+router.put('/cats/:id', (req,res) => {
     const id = req.params.id
     const body = req.body
 
-    Cat.findbyIdAndUpdate(id, body, {new: true}, (err, cat) => {
+    // Updates the kitty cat
+    Cat.findByIdAndUpdate(id, body, {new: true}, (err, cat)=> {
         res.redirect('/cats')
     })
 })
