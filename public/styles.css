@@ -72,7 +72,11 @@ header {
     color: white;
 }
 
-.card .wordFirst {
+/* .card .wordFirst {
+    color: #98A8F8;
+} */
+
+.wordFirst {
     color: #98A8F8;
 }
 
@@ -89,6 +93,52 @@ header {
 }
 
 
+/* ======= Cat Show Page ========= */
+.cat-show {
+    display: flex;
+    flex-direction: row;
+}
+
+.cat-personality {
+    width: 40%;
+    margin: 0 0 0 5%;
+    font-size: 1.2rem;
+}
+
+.personality-head {
+    color: #98A8F8;
+    font-size: 3rem;
+}
+
+.cat-show-buttons {
+    margin: 5%;
+}
+
+.cat-show-buttons .btn-primary {
+    background-color: #181818;
+    border: none;
+    width: 13rem;
+    height: 3rem;
+}
+
+.cat-show-buttons .btn-danger {
+    width: 13rem;
+    height: 3rem;
+}
+
+.cat-show-buttons .btn-group {
+    padding: 0 3% 0 0;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+}
 
 
 /* Colors */

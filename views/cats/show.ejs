@@ -13,7 +13,37 @@
             <a class="nav-link" href="/cats/new"><button class="btn btn-secondary">Add a new Cat</button></a>
         </nav>
 
-        <img class="cat-image" src="<%=cat.url %>" alt="a picture of a <%=cat.breed %>">
+        <div class="cat-show">
+            <div class="left-side">
+                <img class="cat-image" src="<%=cat.url %>" alt="a picture of a <%=cat.breed %>">
+    
+                <section class="personality fontWhite cat-personality">
+                    <p class="personality-head">Personality</p>
+                    <p class=""><%=cat.personality %> </p>
+                </section>
+    
+                <section class="cat-show-buttons">
+                    <div class="btn-group">
+                        <a href="/cats/<%=cat._id %>/edit "><button class="btn btn-primary">Edit</button></a>
+                    </div>
+        
+                    <div class="btn-group">
+                        <form action="/cats/<%=cat._id %>?_method=DELETE" method="POST">
+                            <input class="btn btn-danger" type="submit" value="Delete">
+                        </form>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="right-side fontWhite">
+                <p><span class="wordFirst">Breed:</span><%=cat.breed %></p>
+                <p><span class="wordFirst">Hair Type:</span><%=cat.hairType %></p>
+                <p><span class="wordFirst">Life Expectency:</span><%=cat.lifeExpectency %></p>
+                <p><span class="wordFirst">Male:</span><%=cat.weightRange.male %></p>
+                <p><span class="wordFirst">Female:</span><%=cat.weightRange.female %></p>
+            </div>
+        </div>
+      
         
     </main>
     
