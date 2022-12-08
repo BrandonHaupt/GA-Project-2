@@ -7,7 +7,7 @@
     <%- include('../partials/header.ejs') %> 
     <main>
         <nav class="nav nav-pills nav-fill">
-            <a class="nav-link" href="/cats"><button class="btn btn-secondary">Back</button></a>
+            <a class="container-fluid my-3" href="/cats"><button class="btn btn-secondary">Back</button></a>
         </nav>
 
         <div class="container">
@@ -56,7 +56,7 @@
                 </div>
     
                 <div class="col-12">
-                    <input type="submit" value="Update <%=cat.breed %> ">
+                    <input class="btn btn-primary margin-bottom" type="submit" value="Update <%=cat.breed %> ">
                 </div>
             </form>
         </div>
