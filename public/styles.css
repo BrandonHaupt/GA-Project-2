@@ -86,12 +86,6 @@ header {
     border-radius: 19px 19px 0 0;
 }
 
-.cat-image {
-    width: 40%;
-    margin: 0 0 0 5%;
-    border-radius: 25px;
-}
-
 
 /* ======= Cat Show Page ========= */
 .cat-show {
@@ -99,9 +93,26 @@ header {
     flex-direction: row;
 }
 
-.cat-personality {
+.left-side {
+    display: flex;
+    flex-direction: column;
     width: 40%;
     margin: 0 0 0 5%;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.cat-image {
+    width: 90%;
+    border-radius: 25px;
+}
+
+.cat-personality {
+    width: 80%;
     font-size: 1.2rem;
 }
 
@@ -111,7 +122,7 @@ header {
 }
 
 .cat-show-buttons {
-    margin: 5%;
+    margin: 5% 0;
 }
 
 .cat-show-buttons .btn-primary {
@@ -130,15 +141,32 @@ header {
     padding: 0 3% 0 0;
 }
 
-.left-side {
-    display: flex;
-    flex-direction: column;
+.cat-name {
+    font-size: 5rem;
 }
 
-.right-side {
+.cat-history {
+    width: 80%;
+    align-items: flex-end;
+}
+
+.weight-range {
     display: flex;
     flex-direction: column;
+    width: 80%;
 }
+
+.weight-row {
+    padding: 0 0;
+}
+
+.font-40 {
+    font-size: 2.5rem;
+}
+.font-1-5 {
+    font-size: 1.5rem;
+}
+
 
 
 /* Colors */

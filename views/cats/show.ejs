@@ -18,7 +18,7 @@
                 <img class="cat-image" src="<%=cat.url %>" alt="a picture of a <%=cat.breed %>">
     
                 <section class="personality fontWhite cat-personality">
-                    <p class="personality-head">Personality</p>
+                    <p class="personality-head">Personality:</p>
                     <p class=""><%=cat.personality %> </p>
                 </section>
     
@@ -35,12 +35,16 @@
                 </section>
             </div>
             
-            <div class="right-side fontWhite">
-                <p><span class="wordFirst">Breed:</span><%=cat.breed %></p>
-                <p><span class="wordFirst">Hair Type:</span><%=cat.hairType %></p>
-                <p><span class="wordFirst">Life Expectency:</span><%=cat.lifeExpectency %></p>
-                <p><span class="wordFirst">Male:</span><%=cat.weightRange.male %></p>
-                <p><span class="wordFirst">Female:</span><%=cat.weightRange.female %></p>
+            <div class="right-side fontWhite cat-personality">
+                <p class="cat-name"><span class="wordFirst">Breed: </span><%=cat.breed %></p>
+                <p class="font-1-5"><span class="wordFirst font-40">Hair Type: </span><%=cat.hairType %></p>
+                <p class="font-1-5"><span class="wordFirst font-40">Life Expectency: </span><%=cat.lifeExpectency %></p>
+                <span class="weight-range">
+                    <p class="wordFirst font-40">Weight Range :</p>
+                    <p><span class="weight- font-1-5">Male: </span><%=cat.weightRange.male %></p>
+                    <p><span class="weight-row font-1-5">Female: </span><%=cat.weightRange.female %></p>
+                </span>
+                <p class="cat-history"><span class="wordFirst font-40">History: </span><%=cat.history %></p>
             </div>
         </div>
       
