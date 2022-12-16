@@ -11,9 +11,9 @@
         </nav>
 
         <div class="container">
-            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="card-container">
                 <% for(cat of cats) { %> 
-                    <div class="pb-sm-5">
+                    <div class="card-container">
                         <div class="card g-start-2 " style="width: 18rem;">
                             <a href="/cats/<%=cat._id%>">
                                 <img src="<%=cat.url %> " alt="a picture of a <%=cat.breed %>">

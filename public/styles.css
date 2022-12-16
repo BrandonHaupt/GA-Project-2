@@ -36,6 +36,8 @@ header {
     height: 165px;
     margin: 0 auto;
     object-fit: contain;
+    position: relative;
+    z-index: 10;
 }
 
 .btn-secondary {
@@ -171,4 +173,32 @@ header {
 /* Colors */
 .fontWhite {
     color:white;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    row-gap: 1rem;
+}
+
+@media (min-width: 40em){
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 60em){
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 80em){
+    .card-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
